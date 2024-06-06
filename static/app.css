@@ -1,0 +1,139 @@
+.card .plus {
+    position: relative;
+    left: 55%;
+    top: -90px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 5px;
+    padding: 5px;
+    background-color: white;
+    color: var(--colorDark);
+}
+
+.card:hover > .card_image > .picture {
+    border-radius: 5%;
+    box-shadow: 0 0px 40px var(--colorDark);
+    transform: translateY(-50%) scale(1.5);
+}
+
+.card:hover {
+    background: linear-gradient(
+        var(--colorSecondary) 25%, 
+        var(--colorSecondary) 25%
+        );
+}
+
+.card > .card_image > .picture {
+    transition: all 0.7s;
+}
+
+.card_redes {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card_redes div {
+    padding: 10px;
+    text-align: center;
+    background: var(--colorSecondary);
+    border-radius: 6px;
+    width: 100%;
+    margin: 10px;
+}
+
+.card_redes div p {
+    font-size: 20px;
+}
+
+.card_redes div a {
+    text-decoration: none;
+    color: var(--colorDark);
+}
+
+.card_footer {
+    padding-top: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.card_footer .btn {
+    padding: 8px 20px;
+    border-radius: 25px;
+    color: var(--colorDark);
+    text-decoration: none;
+    background: var(--colorSecondary);
+    transition: all 1s ease;
+}
+
+.card_footer .btn:hover {
+    background: var(--colorDark);
+    color: var(--colorLight);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+:root {
+    --colorLight: rgb(242, 255, 213);
+    --colorDark: rgb(133, 224, 47);
+    --colorSecondary: rgb(216, 255, 185);
+    --colorPrimary: rgb(165, 255, 80);
+}
+
+body {
+    background: rgb(131, 231, 100);
+}
+
+#app {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background: linear-gradient(
+        var(--colorSecondary) 25%, 
+        var(--colorLight) 25%
+        );
+    box-shadow: 0 0 25px var(--colorDark);
+    border-radius: 10px;
+    padding: 50px 16px;    
+}
+
+.card_image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+}
+
+.card_image .picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--colorLight);
+    box-shadow: 0 5px 0px var(--colorDark);
+}
+
+.card_body {
+    text-align: center;
+    padding: 20px;
+}
+
+.card_body h4 {
+    color: var(--colorDark);
+}
